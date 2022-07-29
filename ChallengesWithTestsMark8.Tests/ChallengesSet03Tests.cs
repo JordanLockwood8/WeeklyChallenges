@@ -226,10 +226,7 @@ namespace ChallengesWithTestsMark8.Tests
 
             // Assert
             Assert.Equal(values.Length, expected.Length);
-            for (int i = 0; i < values.Length; i++)
-            {
-                Assert.Equal(expected[i], values[i]);
-            }
+            
         }
     }
 }

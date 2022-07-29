@@ -9,18 +9,27 @@ namespace ChallengesWithTestsMark8
         
         public bool CharacterIsALetter(char c)
         {
-            bool result = char.IsLetter(c);
-            return result;
+            return char.IsLetter(c);
+            //string alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQWRSTUVWXYZ";
+            //for (int i = 0; i < alphabet.Length; i++)
+            //{
+            //    if (alphabet[i] == c)
+            //    {
+            //        return true;
+            //    }                
+            //        return false;                
+            //}
         }
 
 
         public bool CountOfElementsIsEven(string[] vals)
         {
-            if (vals.Length % 2 == 0)
-            {
-                return true;
-            }
-            return false;
+            return vals.Length % 2 == 0;
+            //if (vals.Length % 2 == 0)
+            //{
+            //    return true;
+            //}
+            //return false;
         }
 
         public bool IsNumberEven(int number)
@@ -50,7 +59,10 @@ namespace ChallengesWithTestsMark8
             var min = numbers.Min();
             var max = numbers.Max();            
             var sum = min + max;            
-            return sum;            
+            return sum;
+
+            //return numbers == null || numbers.Count() == 0 ? 0 : numbers.Min() + numbers.Max();
+            
         }
 
         public int GetLengthOfShortestString(string str1, string str2)
@@ -60,6 +72,7 @@ namespace ChallengesWithTestsMark8
                 return str1.Length;
             }
             return str2.Length;
+            //return str1.Length < str2.Length ? str1.Length : str2.Length;
         }
 
         public int Sum(int[] numbers)
@@ -73,6 +86,7 @@ namespace ChallengesWithTestsMark8
 
         public int SumEvens(int[] numbers)
         {
+
             if(numbers == null)
             {
                 return 0;
@@ -86,6 +100,7 @@ namespace ChallengesWithTestsMark8
                 }
             }
             return sum;
+            
         }
 
         public bool IsSumOdd(List<int> numbers)
@@ -99,6 +114,7 @@ namespace ChallengesWithTestsMark8
                 return true;
             }
             return false;
+            //return numbers!= null && numbers.Count() % 2 != 0 && numbers.Sum() % 2 ==0;
         }
 
         public long CountOfPositiveOddsBelowNumber(long number)
@@ -108,6 +124,7 @@ namespace ChallengesWithTestsMark8
                 return 0;
             }
             return number / 2;
+            //return number <=0 ? 0 : number / 2;
         }
     }
 }

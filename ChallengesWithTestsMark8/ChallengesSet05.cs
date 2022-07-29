@@ -7,6 +7,7 @@ namespace ChallengesWithTestsMark8
     {
         public int GetNextNumberDivisibleByN(int startNumber, int n)
         {
+            
             throw new NotImplementedException();
         }
 
@@ -17,7 +18,23 @@ namespace ChallengesWithTestsMark8
 
         public bool IsAscendingOrder(int[] numbers)
         {
-            throw new NotImplementedException();
+            if (numbers == null || numbers.Length == 0)
+            {
+                return false;
+            }
+                bool isAscending = false;
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                if (i > i + 1)
+                {
+                    isAscending = true;
+                }
+                else
+                {
+                    isAscending = false;
+                }
+            }
+                return isAscending;
         }
 
         public int SumElementsThatFollowAnEven(int[] numbers)
